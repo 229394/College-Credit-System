@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B127D769-10AB-4BCE-ADEE-D97169A747DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudentManagement</RootNamespace>
+    <AssemblyName>StudentManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="frmAboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutUs.Designer.cs">
+      <DependentUpon>frmAboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminMain.Designer.cs">
+      <DependentUpon>frmAdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeAdminPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeAdminPwd.Designer.cs">
+      <DependentUpon>frmChangeAdminPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourseInfo.Designer.cs">
+      <DependentUpon>frmCourseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditCouInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditCouInfo.Designer.cs">
+      <DependentUpon>frmEditCouInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditNoticeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditNoticeInfo.Designer.cs">
+      <DependentUpon>frmEditNoticeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditStuInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditStuInfo.Designer.cs">
+      <DependentUpon>frmEditStuInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditStuScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditStuScore.Designer.cs">
+      <DependentUpon>frmEditStuScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditTeaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditTeaInfo.Designer.cs">
+      <DependentUpon>frmEditTeaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmElectCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmElectCourse.Designer.cs">
+      <DependentUpon>frmElectCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNoticeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNoticeInfo.Designer.cs">
+      <DependentUpon>frmNoticeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchCouArrange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchCouArrange.Designer.cs">
+      <DependentUpon>frmSearchCouArrange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchCouTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchCouTable.Designer.cs">
+      <DependentUpon>frmSearchCouTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchNoticeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchNoticeInfo.Designer.cs">
+      <DependentUpon>frmSearchNoticeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchScore.Designer.cs">
+      <DependentUpon>frmSearchScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentScore.Designer.cs">
+      <DependentUpon>frmStudentScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStuUpdatePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStuUpdatePwd.Designer.cs">
+      <DependentUpon>frmStuUpdatePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentInfo.Designer.cs">
+      <DependentUpon>frmStudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentMain.Designer.cs">
+      <DependentUpon>frmStudentMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacherInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherInfo.Designer.cs">
+      <DependentUpon>frmTeacherInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacherMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherMain.Designer.cs">
+      <DependentUpon>frmTeacherMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeaUpdatePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeaUpdatePwd.Designer.cs">
+      <DependentUpon>frmTeaUpdatePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateStuScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateStuScore.Designer.cs">
+      <DependentUpon>frmUpdateStuScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="Teacher.cs" />
+    <EmbeddedResource Include="frmAboutUs.resx">
+      <DependentUpon>frmAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminMain.resx">
+      <DependentUpon>frmAdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeAdminPwd.resx">
+      <DependentUpon>frmChangeAdminPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourseInfo.resx">
+      <DependentUpon>frmCourseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditCouInfo.resx">
+      <DependentUpon>frmEditCouInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditNoticeInfo.resx">
+      <DependentUpon>frmEditNoticeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditStuInfo.resx">
+      <DependentUpon>frmEditStuInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditStuScore.resx">
+      <DependentUpon>frmEditStuScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditTeaInfo.resx">
+      <DependentUpon>frmEditTeaInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmElectCourse.resx">
+      <DependentUpon>frmElectCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNoticeInfo.resx">
+      <DependentUpon>frmNoticeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchCouArrange.resx">
+      <DependentUpon>frmSearchCouArrange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchCouTable.resx">
+      <DependentUpon>frmSearchCouTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchNoticeInfo.resx">
+      <DependentUpon>frmSearchNoticeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchScore.resx">
+      <DependentUpon>frmSearchScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentScore.resx">
+      <DependentUpon>frmStudentScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStuUpdatePwd.resx">
+      <DependentUpon>frmStuUpdatePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentInfo.resx">
+      <DependentUpon>frmStudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentMain.resx">
+      <DependentUpon>frmStudentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherInfo.resx">
+      <DependentUpon>frmTeacherInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherMain.resx">
+      <DependentUpon>frmTeacherMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeaUpdatePwd.resx">
+      <DependentUpon>frmTeaUpdatePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateStuScore.resx">
+      <DependentUpon>frmUpdateStuScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="images\score.jpg" />
+    <Content Include="images\searchInfo.jpg" />
+    <Content Include="images\teapersonalInfo.jpg" />
+    <Content Include="images\searchscore.jpg" />
+    <Content Include="images\stuelection.jpg" />
+    <Content Include="images\aboutus.jpg" />
+    <Content Include="images\add.jpg" />
+    <Content Include="images\courseInfo.jpg" />
+    <Content Include="images\delete.jpg" />
+    <Content Include="images\exit.jpg" />
+    <Content Include="images\searchcourse.jpg" />
+    <Content Include="images\stupersonInfo.jpg" />
+    <Content Include="images\name.jpg" />
+    <Content Include="images\noticeInfo.jpg" />
+    <Content Include="images\password.png" />
+    <Content Include="images\search.jpg" />
+    <Content Include="images\studentInfo.jpg" />
+    <Content Include="images\teacherInfo.jpg" />
+    <Content Include="images\treeicon.jpg" />
+    <Content Include="images\update.jpg" />
+    <Content Include="images\username.png" />
+    <Content Include="images\background.jpg" />
+    <Content Include="images\academy.png" />
+    <Content Include="images\classname.png" />
+    <Content Include="images\number.png" />
+    <Content Include="images\nature.png" />
+    <Content Include="images\coursename.png" />
+    <Content Include="images\save.png" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\noticetitle.png" />
+    <Content Include="images\date.png" />
+    <Content Include="images\teaelection.png" />
+    <Content Include="images\stuscore.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
